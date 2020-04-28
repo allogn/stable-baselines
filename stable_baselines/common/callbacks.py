@@ -29,6 +29,8 @@ class BaseCallback(ABC):
         self.training_env = None  # type: Union[gym.Env, VecEnv, None]
         # Number of time the callback was called
         self.n_calls = 0  # type: int
+        # Number of times the on_rollout_end method called, of this callback
+        self.rollout_calls = 0
         # n_envs * n times env.step() was called
         self.num_timesteps = 0  # type: int
         self.verbose = verbose
@@ -95,6 +97,7 @@ class BaseCallback(ABC):
         pass
 
     def on_rollout_end(self) -> None:
+        self.rollout_calls += 1
         self._on_rollout_end()
 
     def _on_rollout_end(self) -> None:
