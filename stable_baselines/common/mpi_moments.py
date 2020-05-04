@@ -54,7 +54,7 @@ def mpi_moments(arr, axis=0, comm=None, keepdims=False):
 
 def _helper_runningmeanstd():
     comm = MPI.COMM_WORLD
-    np.random.seed(0)
+    # np.random.seed(0)
     for (triple, axis) in [
          ((np.random.randn(3), np.random.randn(4), np.random.randn(5)), 0),
          ((np.random.randn(3, 2), np.random.randn(4, 2), np.random.randn(5, 2)), 0),

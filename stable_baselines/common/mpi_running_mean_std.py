@@ -64,7 +64,7 @@ def test_dist():
     """
     test the running mean std
     """
-    np.random.seed(0)
+    # np.random.seed(0)
     p_1, p_2, p_3 = (np.random.randn(3, 1), np.random.randn(4, 1), np.random.randn(5, 1))
     q_1, q_2, q_3 = (np.random.randn(6, 1), np.random.randn(7, 1), np.random.randn(8, 1))
 

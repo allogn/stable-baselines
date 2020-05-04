@@ -88,7 +88,7 @@ def test_mpi_adam():
     """
     tests the MpiAdam object's functionality
     """
-    np.random.seed(0)
+    # np.random.seed(0)
     tf.set_random_seed(0)
 
     a_var = tf.Variable(np.random.randn(3).astype('float32'))

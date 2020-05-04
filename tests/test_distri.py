@@ -12,7 +12,7 @@ def test_probtypes():
     """
     test probability distribution types
     """
-    np.random.seed(0)
+    # np.random.seed(0)
 
     pdparam_diag_gauss = np.array([-.2, .3, .4, -.5, .1, -.5, .1, 0.8])
     diag_gauss = DiagGaussianProbabilityDistributionType(pdparam_diag_gauss.size // 2)
